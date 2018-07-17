@@ -1,15 +1,13 @@
 # Redux DevTools App
-Remote Redux DevTools Electron monitor app
-
 Monitor [Remote Redux DevTools](https://github.com/zalmoxisus/remote-redux-devtools) via standalone desktop app. 
 
-Intended for other browsers without Redux DevTools extension (Safari, Edge, IE) and/or React Native 
+Intended for browsers without Redux DevTools extension (Safari, Edge, IE) and for React Native.
 
 Goal is to provide Redux DevTools as standalone app like [React DevTools](https://github.com/facebook/react-devtools) does.
 
 ![Demo](https://adamfolwarczny.com/img/github/redux-devtools-app-demo.png)
 
-Apps renders [remotedev-app](https://github.com/zalmoxisus/remotedev-app).
+App renders [remotedev-app](https://github.com/zalmoxisus/remotedev-app).
 
 Use with: [remote-redux-devtools](https://github.com/zalmoxisus/remote-redux-devtools).
 
