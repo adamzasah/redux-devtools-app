@@ -13,9 +13,9 @@ Use with: [remote-redux-devtools](https://github.com/zalmoxisus/remote-redux-dev
 
 ## Installation and usage
 #### Globally
-- install ```$ npm install -g redux-devtools-app``` 
-- run ```$ redux-devtools-app```
+- install `npm install -g redux-devtools-app` 
+- run `redux-devtools-app`
 #### As project dependency
-- ```$ npm install --save-dev redux-devtools-app``` 
+- `npm install --save-dev redux-devtools-app` 
 - add `"redux-devtools": "react-devtools-app"` to the `scripts` section in your `package.json`
 - run `npm run redux-devtools` from your project folder
