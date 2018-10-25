@@ -1,6 +1,6 @@
 {
   "name": "redux-devtools-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Remote Redux DevTools Electron monitor app",
   "bin": {
     "redux-devtools-app": "./src/bin.js"
@@ -38,10 +38,10 @@
     "react-tap-event-plugin": "^2.0.1",
     "remotedev-app": "^0.10.8",
     "style-loader": "^0.21.0",
-    "webpack": "^4.16.1",
-    "webpack-cli": "^3.0.8"
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "electron": "^2.0.5"
+    "electron": "^2.0.12"
   }
 }
