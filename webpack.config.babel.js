@@ -1,15 +1,20 @@
-import path from "path";
+import path from 'path';
 
 const config = {
-    mode: "production",
-    context: path.join(__dirname, "src"),
-    entry: "./devTools.js",
+    mode: 'production',
+    context: path.join(__dirname, 'src'),
+    entry: './devTools.js',
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     module: {
         rules: [{
+            enforce: 'pre',
+            test: /\.jsx?$/,
+            exclude: /node_modules/,
+            loader: 'eslint-loader',
+        }, {
             test: /\.jsx?$/,
             exclude: /(node_modules)/,
             loader: 'babel-loader'
