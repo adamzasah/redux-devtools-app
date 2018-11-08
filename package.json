@@ -1,6 +1,6 @@
 {
     "name": "redux-devtools-app",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Remote Redux DevTools Electron monitor app",
     "bin": {
         "redux-devtools-app": "./src/bin.js"
@@ -34,7 +34,7 @@
         "babel-preset-react": "^6.24.1",
         "babel-preset-stage-0": "^6.24.1",
         "css-loader": "^1.0.0",
-        "eslint-config-react-app-strict": "^1.0.0",
+        "eslint-config-react-app-strict": "^1.0.1",
         "eslint-loader": "^2.1.1",
         "path": "^0.12.7",
         "react": "^15.6.0",
