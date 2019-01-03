@@ -1,6 +1,6 @@
-import path from 'path';
+const path = require('path');
 
-const config = {
+module.exports = {
     mode: 'production',
     context: path.join(__dirname, 'src'),
     entry: './devTools.js',
@@ -17,7 +17,12 @@ const config = {
         }, {
             test: /\.jsx?$/,
             exclude: /(node_modules)/,
-            loader: 'babel-loader'
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env', '@babel/preset-react']
+                }
+            }
         }, {
             test: /\.(css)$/,
             //exclude: /(node_modules)/,
@@ -36,5 +41,3 @@ const config = {
         maxEntrypointSize: 2000000
     }
 };
-
-export default config;
