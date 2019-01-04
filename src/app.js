@@ -1,14 +1,31 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow, systemPreferences} = require('electron');
 
+const appearances = {
+    dark: 'dark',
+    light: 'light'
+};
+
+const isMacOS = process.platform === 'darwin';
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
-function updateMyAppTheme() {
-    const appearance = systemPreferences.isDarkMode() ? 'dark' : 'light';
+function updateAppTheme() {
+    const appearance = systemPreferences.isDarkMode() ? appearances.dark : appearances.light;
+
     // noinspection JSCheckFunctionSignatures
     systemPreferences.setAppLevelAppearance(appearance);
+}
+
+if (isMacOS) {
+    systemPreferences.subscribeNotification(
+        'AppleInterfaceThemeChangedNotification',
+        function theThemeHasChanged() {
+            updateAppTheme();
+        }
+    );
 }
 
 function createWindow() {
@@ -35,18 +52,13 @@ function createWindow() {
     });
 }
 
-systemPreferences.subscribeNotification(
-    'AppleInterfaceThemeChangedNotification',
-    function theThemeHasChanged() {
-        updateMyAppTheme();
-    }
-);
-
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', function () {
-    updateMyAppTheme();
+    if (isMacOS) {
+        updateAppTheme();
+    }
     createWindow();
 });
 
@@ -54,7 +66,7 @@ app.on('ready', function () {
 app.on('window-all-closed', function () {
     // On OS X it is common for applications and their menu bar
     // to stay active until the user quits explicitly with Cmd + Q
-    if (process.platform !== 'darwin') {
+    if (!isMacOS) {
         app.quit();
     }
 });
