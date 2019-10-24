@@ -1,6 +1,6 @@
 {
     "name": "redux-devtools-app",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "description": "Remote Redux DevTools Electron monitor app",
     "bin": {
         "redux-devtools-app": "./src/bin.js"
@@ -28,12 +28,12 @@
     "author": "Adam Folwarczny",
     "license": "MIT",
     "devDependencies": {
-        "@babel/core": "^7.5.0",
-        "@babel/preset-env": "^7.5.0",
-        "@babel/preset-react": "^7.0.0",
-        "@babel/register": "^7.4.4",
+        "@babel/core": "^7.6.4",
+        "@babel/preset-env": "^7.6.3",
+        "@babel/preset-react": "^7.6.3",
+        "@babel/register": "^7.6.2",
         "babel-loader": "^8.0.6",
-        "css-loader": "^3.0.0",
+        "css-loader": "^3.2.0",
         "eslint-config-react-app-strict": "^1.0.4",
         "eslint-loader": "^2.2.1",
         "path": "^0.12.7",
@@ -42,10 +42,10 @@
         "react-tap-event-plugin": "^2.0.1",
         "remotedev-app": "^0.10.12",
         "style-loader": "^0.23.1",
-        "webpack": "^4.35.2",
-        "webpack-cli": "^3.3.5"
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.9"
     },
     "dependencies": {
-        "electron": "^5.0.6"
+        "electron": "^7.0.0"
     }
 }
