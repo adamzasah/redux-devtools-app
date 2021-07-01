@@ -1,32 +1,11 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow, systemPreferences} = require('electron');
-
-const appearances = {
-    dark: 'dark',
-    light: 'light'
-};
+const {app, BrowserWindow} = require('electron');
 
 const isMacOS = process.platform === 'darwin';
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
-
-function updateAppTheme() {
-    const appearance = systemPreferences.isDarkMode() ? appearances.dark : appearances.light;
-
-    // noinspection JSCheckFunctionSignatures
-    systemPreferences.setAppLevelAppearance(appearance);
-}
-
-if (isMacOS) {
-    systemPreferences.subscribeNotification(
-        'AppleInterfaceThemeChangedNotification',
-        function theThemeHasChanged() {
-            updateAppTheme();
-        }
-    );
-}
 
 function createWindow() {
     // Create the browser window.
@@ -56,9 +35,6 @@ function createWindow() {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', function () {
-    if (isMacOS) {
-        updateAppTheme();
-    }
     createWindow();
 });
 
