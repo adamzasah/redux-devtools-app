@@ -6,8 +6,8 @@
         "redux-devtools-app": "./src/bin.js"
     },
     "scripts": {
-        "build": "webpack --colors --progress",
-        "watch": "webpack --progress --colors --watch",
+        "build": "webpack --color --progress",
+        "watch": "webpack --progress --color --watch",
         "start": "node ./src/bin.js",
         "lint": "eslint ./",
         "lint:fix": "eslint ./ --fix"
@@ -28,24 +28,25 @@
     "author": "Adam Folwarczny",
     "license": "MIT",
     "devDependencies": {
-        "@babel/core": "^7.6.4",
-        "@babel/preset-env": "^7.6.3",
-        "@babel/preset-react": "^7.6.3",
-        "@babel/register": "^7.6.2",
-        "babel-loader": "^8.0.6",
-        "css-loader": "^3.2.0",
-        "eslint-config-react-app-strict": "^1.0.4",
-        "eslint-loader": "^2.2.1",
+        "@babel/core": "^7.14.6",
+        "@babel/preset-env": "^7.14.7",
+        "@babel/preset-react": "^7.14.5",
+        "@babel/register": "^7.14.5",
+        "babel-loader": "^8.2.2",
+        "css-loader": "^5.2.6",
+        "eslint-config-react-app-strict": "^1.2.1",
+        "eslint-webpack-plugin": "^2.5.4",
         "path": "^0.12.7",
-        "react": "^15.6.2",
-        "react-dom": "^15.6.2",
+        "react": "^15.7.0",
+        "react-dom": "^15.7.0",
         "react-tap-event-plugin": "^2.0.1",
+        "redux-devtools-chart-monitor": "~1.6.1",
         "remotedev-app": "^0.10.12",
-        "style-loader": "^0.23.1",
-        "webpack": "^4.41.2",
-        "webpack-cli": "^3.3.9"
+        "style-loader": "^3.0.0",
+        "webpack": "^5.41.1",
+        "webpack-cli": "^4.7.2"
     },
     "dependencies": {
-        "electron": "^7.0.0"
+        "electron": "^13.1.4"
     }
 }
