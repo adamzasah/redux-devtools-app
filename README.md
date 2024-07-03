@@ -1,3 +1,9 @@
+<h1>DEPRECATED</h1>
+
+Use official maintained [Redux DevTools CLI](https://www.npmjs.com/package/@redux-devtools/cli) package instead.
+
+---
+
 # Redux DevTools App
 Monitor [Remote Redux DevTools](https://github.com/zalmoxisus/remote-redux-devtools) via standalone desktop app. 
 
